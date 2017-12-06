@@ -1,0 +1,76 @@
+{
+        "type": "object",
+        "title": "Domain Registration",
+        "properties": {
+          "sld": {
+            "type": "string",
+            "pattern": "^([a-z0-9]+)$",
+            "title": "Domain",
+          },
+          "tld": {
+            "title": "Extension",
+            "type": "string",
+            "enum": ["com", "us"]
+          },
+        },
+  "privacy": {
+  "type": "boolean",
+  "title": "Privacy",
+  "default": true
+},
+  "eligibility": {
+    "type": "object",
+    "title": "Eligibility",
+    "properties": {
+      "intent": {
+        "type": "string",
+        "title": "How do you intend to use your .US domain?",
+        "enum": [
+          "businessForProfit",
+          "educational",
+          "government",
+          "businessNonForProfit",
+          "personal",
+        ],
+        "default": "personal",
+        "enumNames": [
+          "Business use for profit",
+          "Educational purposes",
+          "Government purposes",
+          "Non-profit business or organization",
+          "Personal use",
+        ],
+      },
+      "entityType": {
+        "type": "string",
+        "title": "What best describes the company?",
+        "enum": [
+          "incorporatedOrOrganizedInUS",
+          "foreignEntityDoingBusinessInUS",
+          "foreignEntityWithAnOfficeInUS",
+        ],
+        "default": "incorporatedOrOrganizedInUS",
+        "enumNames": [
+          "Incorporated or organized in US",
+          "Foreign entity doing business in US",
+          "Foreign entity with an office in US"
+        ],
+      },
+      "countryOfCitizenship": {
+        "type": "string",
+        "title": "Select your country of citizenship",
+        "enum": [
+          "argentina",
+          "italy",
+          "unitedStates"
+        ],
+        "default": "unitedStates",
+        "enumNames": [
+          "Argentina",
+          "Italy",
+          "United States"
+        ]
+      }
+    }
+  }
+}
