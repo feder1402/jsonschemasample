@@ -1,23 +1,26 @@
 {
-        "type": "object",
-        "title": "Domain Registration",
-        "properties": {
-          "sld": {
-            "type": "string",
-            "pattern": "^([a-z0-9]+)$",
-            "title": "Domain",
-          },
-          "tld": {
-            "title": "Extension",
-            "type": "string",
-            "enum": ["com", "us"]
-          },
-        },
+  "type": "object",
+  "title": "Domain Registration",
+  "properties": {
+    "sld": {
+      "type": "string",
+      "pattern": "^([a-z0-9]+)$",
+      "title": "Domain"
+    },
+    "tld": {
+      "title": "Extension",
+      "type": "string",
+      "enum": [
+        "com",
+        "us"
+      ]
+    }
+  },
   "privacy": {
-  "type": "boolean",
-  "title": "Privacy",
-  "default": true
-},
+    "type": "boolean",
+    "title": "Privacy",
+    "default": true
+  },
   "eligibility": {
     "type": "object",
     "title": "Eligibility",
@@ -30,7 +33,7 @@
           "educational",
           "government",
           "businessNonForProfit",
-          "personal",
+          "personal"
         ],
         "default": "personal",
         "enumNames": [
@@ -38,8 +41,8 @@
           "Educational purposes",
           "Government purposes",
           "Non-profit business or organization",
-          "Personal use",
-        ],
+          "Personal use"
+        ]
       },
       "entityType": {
         "type": "string",
@@ -47,14 +50,14 @@
         "enum": [
           "incorporatedOrOrganizedInUS",
           "foreignEntityDoingBusinessInUS",
-          "foreignEntityWithAnOfficeInUS",
+          "foreignEntityWithAnOfficeInUS"
         ],
         "default": "incorporatedOrOrganizedInUS",
         "enumNames": [
           "Incorporated or organized in US",
           "Foreign entity doing business in US",
           "Foreign entity with an office in US"
-        ],
+        ]
       },
       "countryOfCitizenship": {
         "type": "string",
